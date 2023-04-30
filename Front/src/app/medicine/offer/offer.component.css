@@ -1,0 +1,108 @@
+.section-header h2 {
+  font-size: 36px;
+  margin: 30px 0;
+  font-weight: bold;
+}
+.bg-yellow {
+  background-color: #ffeaca;
+}
+.offer-widget {
+  position: relative;
+  padding: 70px;
+  border-radius: 20px;
+}
+.offer-widget span {
+  background: #14558d;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 5px;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.offer-widget p {
+  font-size: 26px;
+  margin-bottom: 0;
+}
+.offer-widget h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.offer-widget a {
+  background: #14558d;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 14px 15px;
+  box-shadow: inset 0 0 0 0 #fff;
+}
+.offer-widget.bg-yellow .offer-img {
+  bottom: 20px;
+  top: auto;
+}
+.offer-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 350px;
+}
+.offer-widget.bg-blue {
+  background: url("../../../assets/image/medicine/offer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  .offer-widget {
+    margin-bottom: 20px;
+  }
+  .offer-img {
+    max-width: 270px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  .offer-widget {
+    padding: 30px;
+  }
+  .offer-widget p {
+    font-size: 18px;
+  }
+  .offer-widget h3 {
+    font-size: 26px;
+  }
+  .offer-widget a {
+    padding: 8px 15px;
+  }
+  .offer-widget.bg-yellow .offer-img {
+    right: 0px;
+    text-align: right;
+  }
+  .offer-widget .offer-img img {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+  .offer-widget {
+    padding: 30px;
+  }
+  .offer-widget p {
+    font-size: 18px;
+  }
+  .offer-widget a {
+    padding: 8px 15px;
+  }
+  .offer-widget h3 {
+    font-size: 26px;
+  }
+  .offer-widget.bg-yellow .offer-img {
+    right: 0px;
+    text-align: right;
+  }
+  .offer-widget .offer-img img {
+    width: 50%;
+  }
+}

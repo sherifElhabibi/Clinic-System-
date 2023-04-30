@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row mt-2">
+    <div class="col-md-5 col-sm-11 mx-auto">
+      <form [formGroup]="addingForm" (ngSubmit)="onSubmit()" class="py-5 px-4 rounded-1 my-3">
+        <div class="mb-3">
+          <label for="exampleInputDate" class="form-label">Date</label>
+          <input type="date" min="{{ today | date : 'yyyy-MM-dd' }}" class="form-control" id="exampleInputDate"
+            name="prescriptionDate" formControlName="prescriptionDate" />
+        </div>
+        <!-- <div class="mb-3">
+          <label for="exampleInputClinic" class="form-label">Clinic</label>
+          <select name="" id="exampleInputClinic" class="form-control" formControlName="clinicid" #selectedClinic (change)="getDoctorsOfClinic(selectedClinic.value)">
+            <option value="{{ item._id }}" *ngFor="let item of clinics">{{ item.name }}</option>
+          </select>
+        </div> -->
+        <div class="mb-3">
+          <label for="exampleInputFirst" class="form-label">Patient</label>
+          <input type="text" class="form-control" id="exampleInputFirst" name="patientid" formControlName="patientid" (blur)="onPatientChange()" />
+        </div>
+        <!-- <div class="mb-3">
+          <label for="exampleInputFirst" class="form-label">Doctor</label>
+          <select id="exampleInputFirst" name="doctorid" formControlName="doctorid" class="form-control">
+            <option value="{{item._id}}" *ngFor="let item of doctors">{{item.firstName}} {{item.lastName}}</option>
+          </select>
+        </div> -->
+        <div class="mb-3">
+          <label for="exampleInputFirst" class="form-label">Medicine</label>
+          <div>
+            <button type="button" class="btn addMedecine mt-3" (click)="addMedecine()">
+              Add Medicine
+            </button>
+          </div>
+          <div formArrayName="medicineid" *ngFor="let control of Medecine.controls; let i = index">
+            <div [formGroupName]="i">
+              <button type="button" class="btn btn-danger my-3" (click)="removeMedecine(i)">
+                X
+              </button>
+              <!-- <input type="text" class="form-control mb-2" /> -->
+              <input matInput formControlName="name"  class="form-control mb-2"/>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-submit py-1 px-2">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

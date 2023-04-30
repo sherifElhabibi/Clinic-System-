@@ -1,0 +1,33 @@
+<section class="section section-categories">
+  <div class="container">
+    <div class="row">
+      <div class="section-header">
+        <h2>Popular Categories</h2>
+      </div>
+      <div class="popular-cateogries">
+        <div class="category-tab">
+          <ul class="nav justify-content-center">
+            <li>
+              <a
+                href=""
+                class="active"
+                routerLinkActive="active"
+                routerLink="supplement"
+                >Supplement</a
+              >
+            </li>
+            <li>
+              <a href="" class="active" routerLink="medicineCate">Medicine</a>
+            </li>
+            <li>
+              <a href="" class="active" routerLink="herbs">Herbs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- end Category -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
+<app-offer></app-offer>

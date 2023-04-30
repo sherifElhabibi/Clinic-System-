@@ -1,0 +1,190 @@
+.section-header {
+  text-align: center;
+}
+.tab-pane {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  .tab-pane {
+    flex-direction: column;
+  }
+  .card {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  .tab-pane {
+    flex-direction: column;
+  }
+  .card {
+    margin-top: 1rem;
+  }
+  .card .book-btn {
+    width: 100%;
+  }
+  .nav li a {
+    width: 200px;
+    height: auto;
+  }
+  .section-header h2 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+  .tab-pane {
+    flex-direction: column;
+  }
+  .card {
+    margin-top: 1rem;
+  }
+  .card .book-btn {
+    width: 100%;
+  }
+  .nav li a {
+    width: 200px;
+    height: auto;
+  }
+}
+/*  */
+.card {
+  border: none;
+}
+.category-tab {
+  text-align: center;
+}
+.category-tab ul {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+.category-tab ul li {
+  display: inline-block;
+  margin: 0 30px 20px 0;
+}
+.category-tab ul li a {
+  text-decoration: none;
+}
+
+.category-tab ul li a.actve {
+  background: #14558d;
+  color: #fff;
+}
+.category-tab ul li a {
+  display: inline-block;
+  background: rgba(20, 85, 141, 0.1);
+  border-radius: 8px;
+  padding: 15px 25px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #14558d;
+}
+.section-header h2 {
+  font-size: 36px;
+  margin: 30px;
+  font-weight: bold;
+}
+.card .deal-pro-img {
+  background: #f6f5fa;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.deal-pro-img {
+  position: relative;
+  text-align: center;
+}
+.card .deal-pro-tags {
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  width: unset;
+  z-index: 1;
+}
+.deal-pro-tags {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+}
+.deal-pro-tags .offer {
+  background: #0ae5a8;
+  border-radius: 6px;
+  padding: 7px;
+  color: #000000;
+  font-weight: 600;
+  font-size: 10px;
+}
+.card .deal-pro-img img {
+  margin: 0 auto;
+  transform: translateZ(0);
+  transition: all 2000ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+  width: 100%;
+}
+.card .card-body h6 {
+  color: #0de0fe;
+}
+.card-body h6 {
+  font-size: 12px;
+  color: rgba(39, 43, 65, 0.5);
+  margin-bottom: 8px;
+}
+.card-body h5 {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+.card-body h2 {
+  font-weight: 600;
+  font-size: 22px;
+  color: #0ae5a8;
+  margin-bottom: 15px;
+}
+.card .book-btn {
+  display: block;
+  margin-bottom: 0;
+  font-size: 16px;
+  padding: 13px 15px;
+}
+.card-body .book-btn {
+  display: inline-flex;
+  box-align: center;
+  justify-content: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  padding: 4px 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.book-btn {
+  background-color: #0de0fe;
+  border: #0de0fe;
+  box-shadow: inset 0 0 0 0 #fff;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  font-weight: 500;
+  padding: 6px;
+  width: 200px;
+  height: 50px;
+}
+.card-body .book-btn img {
+  margin-right: 10px;
+}
+.section-categories {
+  background-color: #fff;
+}

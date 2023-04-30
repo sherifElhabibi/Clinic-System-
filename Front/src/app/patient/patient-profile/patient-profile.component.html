@@ -1,0 +1,208 @@
+<div class="main-wrapper">
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+            <div class="profile-sidebar">
+              <div class="widget-profile pro-widget-content">
+                <div class="profile-info-widget">
+                  <a href="#" class="booking-doc-img">
+                    <img src="assets/img/patients/patient.jpg" alt="User Image" />
+                  </a>
+                  <div class="profile-det-info">
+                    <h3>{{ patient.fname }} {{ patient.lname }}</h3>
+                    <div class="patient-details">
+                      <h5>{{ patient.age }} years</h5>
+                      <h5 class="mb-0">{{ patient.address.city }},Egypt</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-widget">
+                <nav class="dashboard-menu">
+                  <ul>
+                    <li>
+                      <a href="profile-settings.html">
+                        <i class="fas fa-user-cog"></i>
+                        <span
+                          ><a [routerLink]="['/patient/update/', patient._id]"
+                            >Profile Settings</a
+                          ></span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="index.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span><a (click)="logOut()">Logout</a></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-7 col-lg-8 col-xl-9">
+            <div class="card">
+              <div class="card-body pt-0">
+                <nav class="user-tabs mb-4">
+                  <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="GetAppointments()"
+                        >Appointments</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        (click)="GetPrescriptions()"
+                        data-bs-toggle="tab"
+                        >Prescriptions</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        (click)="GetInvoices()"
+                        data-bs-toggle="tab"
+                        >Invoices</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <div class="tab-content pt-0">
+                  <div id="pat_appointments" class="tab-pane fade show active">
+                    <div class="card card-table mb-0">
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <!-- <table
+                            class="table table-hover table-center mb-0"
+                            *ngIf="getAppointments"
+                          >
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Doctor</th>
+                                <th>Specialty</th>
+                                <th>Booking Date</th>
+                                <th>Booking Time</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr
+                                *ngFor="let item of appointments; let i = index"
+                              >
+                                <td>{{ i + 1 }}</td>
+                                <td>
+                                  {{ item.doctor.firstName }}
+                                  {{ item.doctor.lastName }}
+                                </td>
+                                <td>{{ item.doctor.specialty }}</td>
+                                <td>{{ item.date }}</td>
+                                <td>{{ item.time }}</td>
+                                <td></td>
+                                <td class="text-end">
+                                  <div class="table-action">
+                                    <a
+                                      class="btn btn-sm bg-info-light"
+                                      (click)="deleteAppointment(item._id)"
+                                    >
+                                      Delete
+                                    </a>
+                                    <a class="btn btn-sm bg-info-light"> View </a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade show active" id="pat_prescriptions">
+                    <div class="card card-table mb-0">
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table
+                            class="table table-hover table-center mb-0"
+                            *ngIf="getPrescriptions"
+                          >
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Doctor</th>
+                                <th>Clinic</th>
+                                <th>Prescription Date</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr
+                                *ngFor="let item of prescriptions; let i = index"
+                              >
+                                <td>{{ i + 1 }}</td>
+                                <td>
+                                  {{ item.doctorId.firstName }}
+                                  {{ item.doctorId.lastName }}
+                                </td>
+                                <td>{{ item.clinicId.name }}</td>
+                                <td>{{ item.prescriptionDate }}</td>
+                                <td class="text-end">
+                                  <div class="table-action">
+                                    <a class="btn btn-sm bg-info-light"> View </a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="pat_medical_records" class="tab-pane fade show active">
+                    <div class="card card-table mb-0">
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table
+                            class="table table-hover table-center mb-0"
+                            *ngIf="getInvoices"
+                          >
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Model</th>
+                                <th>Invoice Date</th>
+                                <th>Invoice Time</th>
+                                <th>Status</th>
+                                <th>Paid</th>
+                                <th>Total</th>
+                                <th>Payment Method</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let item of invoices; let i = index">
+                                <td>{{ i + 1 }}</td>
+                                <td>{{ item.patientModel }}</td>
+                                <td>{{ item.invoiceDate }}</td>
+                                <td>{{ item.invoiceTime }}</td>
+                                <td>{{ item.status }}</td>
+                                <td>{{ item.paid }}</td>
+                                <td>{{ item.totalDue }}</td>
+                                <td>{{ item.paymentMethod }}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

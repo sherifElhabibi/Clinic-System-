@@ -1,0 +1,25 @@
+<div class="tab-pane">
+  <div
+    class="card"
+    style="width: 15rem"
+    *ngFor="let items of Medicine | slice : 2 : 6"
+  >
+    <div class="deal-pro-img">
+      <div class="deal-pro-tags" *ngIf="items.offer != 0">
+        <span class="offer">{{ -items.offer | currency }} off</span>
+      </div>
+
+      <img class="img-fluid" src="{{ items.image }}" alt="Card image cap" />
+    </div>
+    <div class="card-body">
+      <h6 class="card-title">{{ items.type }}</h6>
+      <h5 class="card-text">{{ items.name }}</h5>
+      <h2>{{ items.price | currency }}</h2>
+
+      <a class="btn book-btn" (click)="Add(items._id)">
+        <img src="../../../../../../assets/image/cart-icon.svg" alt="" />
+        Add to Cart
+      </a>
+    </div>
+  </div>
+</div>

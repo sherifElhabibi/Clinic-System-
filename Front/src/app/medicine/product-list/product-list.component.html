@@ -1,0 +1,118 @@
+<div class="content pharmacy-cart-content">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-3 col-xl-3"
+        style="
+          position: relative;
+          overflow: visible;
+          box-sizing: border-box;
+          min-height: 1px;
+        "
+      >
+        <!-- <div
+          class="theiaStickySidebar"
+          style="
+            padding-top: 0px;
+            padding-bottom: 0px;
+            position: static;
+            transform: none;
+            top: 0px;
+            left: 143.5px;
+          "
+        >
+          <div class="filter-new">
+            <div class="filter-header">
+              <h4>Price Range</h4>
+            </div>
+            <div class="filter-widget">
+              <mat-slider min="200" max="1000">
+                <input value="300" matSliderStartThumb />
+                <input value="400" matSliderEndThumb />
+              </mat-slider>
+            </div>
+          </div>
+        </div> -->
+        <!--  -->
+
+        <!--  -->
+      </div>
+
+      <div class="col-lg-9 col-xl-9">
+        <div class="pro-grid">
+          <div class="col-md-6 col-lg-12 col-xl-4">
+            <div class="tab-pane">
+              <div
+                class="card"
+                style="width: 15rem"
+                *ngFor="let items of Medicine"
+              >
+                <div class="deal-pro-img">
+                  <div class="deal-pro-tags" *ngIf="items.offer != 0">
+                    <span class="offer">{{ -items.offer | currency }} off</span>
+                  </div>
+
+                  <img
+                    class="img-fluid"
+                    src="{{ items.image }}"
+                    alt="Card image cap"
+                  />
+                </div>
+                <div class="card-body">
+                  <h6 class="card-title">{{ items.type }}</h6>
+                  <h5 class="card-text">{{ items.name }}</h5>
+                  <h2>{{ items.price | currency }}</h2>
+
+                  <a class="btn book-btn" (click)="Add(items._id)">
+                    <img
+                      src="../../../../../../assets/image/cart-icon.svg"
+                      alt=""
+                    />
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="tab-pane">
+      <div
+        class="card"
+        style="width: 15rem"
+        *ngFor="let items of Medicine | slice : 2 : 6"
+      >
+        <div class="deal-pro-img">
+          <div class="deal-pro-tags" *ngIf="items.offer != 0">
+            <span class="offer"
+              >{{ -items.offer | currency }} off</span
+            >
+          </div>
+  
+          <img
+            class="img-fluid"
+            src="../../../../../../assets/image/public/img/medicine/medicine/medicine/{{
+              items.image
+            }}"
+            alt="Card image cap"
+          />
+        </div>
+        <div class="card-body">
+          <h6 class="card-title">{{ items.type }}</h6>
+          <h5 class="card-text">{{ items.name }}</h5>
+          <h2>{{ items.price | currency }}</h2>
+  
+          <a href="#" class="btn book-btn">
+            <img
+              src="../../../../../../assets/image/cart-icon.svg"
+              alt=""
+            />
+            Add to Cart
+          </a>
+        </div>
+      </div>
+    </div> -->

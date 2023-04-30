@@ -1,0 +1,15 @@
+.inner-container{
+  border: 1px solid var(--lightgrey);
+  flex-wrap: wrap;
+}
+.btn-update{
+  background-color: var(--main);
+  color: var(--white);
+}
+.btn-update:hover{
+  background-color: var(--submain);
+  color: var(--white);
+}
+strong{
+  color: var(--main)
+}

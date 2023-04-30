@@ -1,0 +1,22 @@
+<div class="row justify-content-center align-items-center mt-5">
+  <div class="card col-md-5 col-sm-8">
+    <div class="card-body">
+      <h4 class="card-title text-center mb-3 fw-bold">Prescription</h4>
+      <ul class="list-unstyled">
+        <li><strong>Patient Name: </strong>{{ data.patientId.fname }} {{ data.patientId.lname }}</li>
+        <li><strong>Date: </strong>{{ data.prescriptionDate }}</li>
+        <li><strong>Doctor Name: </strong>{{ data.doctorId.firstName }} {{ data.doctorId.lastName }}</li>
+        <li><strong>Clinic Name: </strong>{{ data.clinicId.name }}</li>
+        <li><strong>Clinic Address: </strong>{{ data.clinicId.address.city }}, {{ data.clinicId.address.street }}, {{ data.clinicId.address.buildingNumber }}</li>
+        <li><strong>Clinic Department: </strong>{{ data.clinicId.department }}</li>
+        <li><strong>Clinic Telephone: </strong>{{ data.clinicId.telephoneNumber }}</li>
+        <li>
+          <strong>Medecine: </strong>
+          <ul class="list-unstyled">
+            <li *ngfor="let medecine of mediciens">{{medecine.name}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.card{
+  box-shadow: 1px 1px 5px var(--lightgrey);
+}
+.card-title{
+  color: var(--main);
+}
+.card ul li  strong{
+  color: var(--title);
+}
+strong{
+  color: var(--submain);
+}

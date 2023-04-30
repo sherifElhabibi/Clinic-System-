@@ -1,0 +1,280 @@
+<p>doctor-add works!</p>
+<div class="container">
+    <!-- <div class="text-bg-danger">
+    {{errorMessage}}
+</div> -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">
+                First Name:
+                <input type="text" formControlName="firstName" class="form-control" [class.is-valid]="firstName?.valid" [class.is-invalid]="firstName?.invalid &&firstName?.touched" >    
+            </label>
+            <div class="alert alert-warning " [hidden]="firstName?.valid ||firstName?.untouched">
+                <small *ngIf="firstName?.errors?.['required']">
+                        first name Is Required
+                </small>
+                <small *ngIf="firstName?.errors?.['pattern']">
+                       first name must be atleast 3 char 
+                </small>
+            </div>
+            <div class="alert alert-warning" *ngIf="errorFirstNameMessage">
+                {{errorFirstNameMessage}}
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">
+                Last Name:
+                <input type="text" formControlName="lastName" class="form-control" [class.is-valid]="lastName?.valid" [class.is-invalid]="lastName?.invalid &&lastName?.touched">
+            </label>
+            <div class="alert alert-warning " [hidden]="lastName?.valid ||lastName?.untouched">
+                <small *ngIf="lastName?.errors?.['required']">
+                        lastName Is Required
+                </small>
+                <small *ngIf="lastName?.errors?.['pattern']">
+                       last name must be atleast 3 char 
+                </small>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+            <label class="form-label">
+                    Specialty:
+                        <select formControlName="specialty" class="form-select">
+                                <option value="">Select specialty</option>
+                                <option value="Pediatrician">Pediatrician</option>
+                                <option value="Gynecologist">Gynecologist</option>
+                                <option value="Cardiologist">Cardiologist</option>
+                                <option value="Psychiatrist">Psychiatrist</option>
+                                <option value="Neurologist">Neurologist</option>
+                                <option value="Radiologist">Radiologist</option>
+                                <option value="Dentist">Dentist</option>
+                                <option value="Surgeon">Surgeon</option>
+                        </select>
+            </label>
+
+            <div class="alert alert-warning " [hidden]="specialty?.valid ||specialty?.untouched">
+                <small *ngIf="specialty?.errors?.['required']">
+                    specialty Is Required
+                </small>
+
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">
+                Vezeeta:
+                <input type="text" formControlName="vezeeta" class="form-control" [class.is-valid]="vezeeta?.valid" [class.is-invalid]="vezeeta?.invalid &&vezeeta?.touched">
+            </label>
+            <div class="alert alert-warning " [hidden]="vezeeta?.valid ||vezeeta?.untouched">
+                <small *ngIf="vezeeta?.errors?.['required']">
+                    vezeeta Is Required
+                </small>
+                <small *ngIf="vezeeta?.errors?.['pattern'] ||vezeeta?.errors?.['min']">
+                       vezeeta must be number and min value is 100
+                </small>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">
+                Password:
+                <input type="password" formControlName="password" class="form-control" [class.is-valid]="password?.valid" [class.is-invalid]="password?.invalid &&password?.touched">
+            </label>
+            <div class="alert alert-warning " [hidden]="password?.valid ||password?.untouched">
+                <small *ngIf="password?.errors?.['required']">
+                    password Is Required
+                </small>
+                <small *ngIf="password?.errors?.['pattern']">
+                   <span>
+                    Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*()_+-=[];':"\|,.<>/?). Please try again.
+                   </span> 
+                </small>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">
+                Email:
+                <input type="email" formControlName="email" class="form-control" [class.is-valid]="email?.valid" [class.is-invalid]="email?.invalid &&email?.touched">
+            </label>
+            <div class="alert alert-warning " [hidden]="email?.valid ||email?.untouched">
+                <small *ngIf="email?.errors?.['required']">
+                    email Is Required
+                </small>
+                <small *ngIf="email?.errors?.['email']">
+                   email is not valid
+                </small>
+
+            </div>
+            <div class="alert alert-warning" *ngIf="errorEmailMessage">
+                {{errorEmailMessage}}
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <label class="form-label">
+                Salary:
+                <input type="text" formControlName="salary" class="form-control" [class.is-valid]="salary?.valid" [class.is-invalid]="salary?.invalid &&salary?.touched">
+            </label>
+            <div class="alert alert-warning " [hidden]="salary?.valid ||salary?.untouched">
+                <small *ngIf="salary?.errors?.['required']">
+                    salary Is Required
+                </small>
+                <small *ngIf="salary?.errors?.['pattern']||salary?.errors?.['min']">
+                   salary should be number and minvalue is 3000
+                </small>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <label class="form-label">
+                Age:
+                <input type="text" formControlName="age" class="form-control" [class.is-valid]="age?.valid" [class.is-invalid]="age?.invalid &&age?.touched">
+            </label>
+
+            <div class="alert alert-warning " [hidden]="age?.valid ||age?.untouched">
+                <small *ngIf="age?.errors?.['required']">
+                    age Is Required
+                </small>
+                <small *ngIf="age?.errors?.['pattern']||age?.errors?.['min']">
+                   age should be number and min age is 25
+                </small>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <label class="form-label">
+                Gender:
+                <select formControlName="gender" class="form-select">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </label>
+            <div class="alert alert-warning " [hidden]="gender?.valid ||gender?.untouched">
+                <small *ngIf="gender?.errors?.['required']">
+                    Gender Is Required
+                </small>
+
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">
+                Location:
+                <select formControlName="location" class="form-select">
+                    <option value="">Select location</option>
+                    <option value="Newyork, USA">Newyork, USA</option>
+                    <option value="Georgia, USA">Georgia, USA</option>
+                    <option value="Louisiana, USA">Louisiana, USA</option>
+                    <option value="Texas, USA">Texas, USA</option>
+                </select>
+            </label>
+            <div class="alert alert-warning " [hidden]="location?.valid ||location?.untouched">
+                <small *ngIf="location?.errors?.['required']">
+                    location Is Required
+                </small>
+
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">
+                degrees:
+                <select formControlName="degrees" class="form-select">
+                    <option value="">Select degrees</option>
+                    <option value="MS - Orthopaedics, MBBS, M.Ch - Orthopaedics">MS - Orthopaedics, MBBS, M.Ch - Orthopaedics</option>
+                    <option value="MBBS, MS - General Surgery, MCh - Urology">MBBS, MS - General Surgery, MCh - Urology</option>
+                    <option value="MBBS, MD - General Medicine, DNB - Cardiology">MBBS, MD - General Medicine, DNB - Cardiology</option>
+                    <option value="BDS, MDS - Oral & Maxillofacial Surgery">BDS, MDS - Oral & Maxillofacial Surgery</option>
+                    <option value="MDS - Periodontology and Oral Implantology, BDS">MDS - Periodontology and Oral Implantology, BDS</option>
+                </select>
+            </label>
+            <div class="alert alert-warning " [hidden]="degrees?.valid ||degrees?.untouched">
+                <small *ngIf="degrees?.errors?.['required']">
+                    degrees Is Required
+                </small>
+
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <label class="form-label">
+    Clinic:
+    <input type="number" formControlName="clinic" class="form-control">
+  </label>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">
+                Image:
+                 <input type="file"  class="form-control" (change)="uploadFile($event)">
+            </label>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">
+            Role:
+            <input type="text" formControlName="role" class="form-control">
+        </label>
+
+            <div formGroupName="schedule" class="form-group">
+                <div formArrayName="timeSlots">
+                    <div *ngFor="let schedule of timeSlots.controls; let i=index" [formGroupName]="i" class="form-group">
+                        <div class="form-row">
+
+                            <div class="form-group col-md-4">
+                                <label for="day">Day:</label>
+
+                                <select formControlName="day" id="day" class="form-control">
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+                                        <option value="Sunday">Sunday</option>
+                                </select>
+
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="startTime">Start Time:</label>
+                                <input type="time" formControlName="startTime" id="startTime" class="form-control">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="endTime">End Time:</label>
+                                <input type="time" formControlName="endTime" id="endTime" class="form-control">
+                            </div>
+
+                        </div>
+                        <button type="button" *ngIf="i!==0" (click)="timeSlots.removeAt(i)" class="btn btn-danger m-2">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" (click)="addSchedule()" class="btn btn-success m-1">Add Schedule</button>
+
+
+
+
+        </div>
+        <div class="col-12">
+            <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        </div>
+
+
+
+    </form>
+</div>
+
+
+<!-- dddddddddd -->
+<div class="text-bg-danger">
+    {{form.value|json}}
+</div>

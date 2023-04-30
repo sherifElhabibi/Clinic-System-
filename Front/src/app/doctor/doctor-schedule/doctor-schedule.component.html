@@ -1,0 +1,48 @@
+<p>doctor-schedule works!</p>
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Day</th>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Book Appointment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sch of doctorSchedule">
+                <td>{{sch.day}}</td>
+                <td>{{sch.startTime}} PM</td>
+                <td>{{sch.endTime}} PM</td>
+                <!-- <td><a class="btn btn-primary" [routerLink]="['/book/create', doctor._id]">Book</a></td> -->
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Book
+                  </button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Popup Modal Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body ">
+                <!-- Add your popup content here -->
+                <p>This is some sample content for the popup modal.</p>
+                <app-appointment-add></app-appointment-add>
+                <!-- endddddddddddddddddddddddddddddddddddddddddddd -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

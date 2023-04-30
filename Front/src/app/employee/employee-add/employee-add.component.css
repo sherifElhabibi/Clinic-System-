@@ -1,0 +1,15 @@
+form{
+  box-shadow: 1px 1px 2px var(--lightgrey),
+              -1px -1px 2px var(--lightgrey);
+}
+label{
+  color: var(--main);
+  font-weight: 500;
+}
+form .btn-submit{
+  background-color: var(--main);
+  color: var(--white);
+}
+form .btn-submit:hover{
+  background-color: var(--submain);
+}

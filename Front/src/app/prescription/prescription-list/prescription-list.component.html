@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row mt-5">
+    <div
+      class="w-75 mx-auto py-3 mb-3 d-md-flex d-block justify-content-around align-items-center inner-container"
+      *ngFor="let item of prescriptions"
+    >
+      <div class="body text-center mb-2">
+        <div class="name"><strong>Patient Name:</strong> {{ item.patientId.fname }} {{ item.patientId.lname }}</div>
+        <div class="info">
+          <ul class="list-unstyled d-inline-block">
+            <li><strong>DR:</strong> {{ item.doctorId.firstName }} {{ item.doctorId.lastName }}</li>
+            <ul class="list-unstyled d-inline-block">
+              <p>{{ item.clinicId.name }}</p>
+              <li>{{ item.clinicId.address.city }}</li>
+              <li>{{ item.clinicId.address.street }}</li>
+              <li>{{ item.clinicId.address.buildingNumber }}</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="update text-center mb-2">
+        <button class="btn btn-update px-3 py-2" (click)="GetDetails(item._id)">
+          Details
+        </button>
+      </div>
+      <div class="delete text-center mb-2">
+        <button class="btn btn-danger px-3 py-2" (click)="Delete(item._id)">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

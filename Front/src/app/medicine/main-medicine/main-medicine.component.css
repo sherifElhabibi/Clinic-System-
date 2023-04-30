@@ -1,0 +1,166 @@
+.pharm-slide-home {
+  background: url("../../../assets/image/medicine/bg-01.png"),
+    url("../../../assets/image/medicine/bg-02.png"),
+    url("../../../assets/image/medicine/bg-03.png"),
+    linear-gradient(90deg, #05497a 0%, #0c70c6 100%);
+  background-position: left 100px, right bottom, right 30% top 0, 0;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 350px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.pharm-slide-home .image {
+  padding: 130px 0;
+}
+.image {
+  width: 100%;
+  min-height: 358px;
+  display: flex !important;
+  justify-content: center;
+  flex-direction: column;
+  vertical-align: middle;
+  background-position: right;
+  background-size: contain;
+  margin: 10px;
+}
+.pharm-slide-home h6 {
+  color: #0ae5a8;
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.pharm-slide-home .image h2 {
+  font-weight: 600;
+  font-size: 100px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.pharm-slide-home .image h2 span {
+  font-weight: 600;
+  font-size: 80px;
+  color: #0ae5a8;
+}
+.pharm-slide-home p {
+  color: #fff;
+  font-weight: 50;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.d-inline-block {
+  display: inline-block !important;
+}
+.pharm-slide-home .image .book-btn1 {
+  padding: 12px 23px;
+  font-weight: 600;
+  font-size: 18px;
+  min-width: 161px;
+}
+.book-btn1 {
+  background-color: #0de0fe;
+  border: 2px solid #0de0fe;
+  box-shadow: inset 0 0 0 0 #01cae4;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 6px 10px;
+}
+.image img {
+  display: block;
+}
+@media only screen and (max-width: 1399px) {
+  .pharm-slide-home .image h2 {
+    font-size: 100px;
+    margin-top: 30px;
+  }
+  .pharm-slide-home .image h2 span {
+    font-size: 60px;
+  }
+  .pharm-slide-home .image p {
+    font-weight: 300;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .pharm-slide-home {
+    text-align: center;
+  }
+  .pharm-slide-home p {
+    font-size: 18px;
+  }
+  .pharm-slide-home h6 {
+    color: #0ae5a8;
+    font-weight: 500;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .pharm-slide-home .image h2 {
+    font-size: 70px;
+  }
+  .pharm-slide-home .image h2 span {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+  .pharm-slide-home {
+    text-align: center;
+  }
+  .pharm-slide-home p {
+    font-size: 18px;
+  }
+  .pharm-slide-home h6 {
+    color: #0ae5a8;
+    font-weight: 500;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .pharm-slide-home .image h2 {
+    font-size: 70px;
+  }
+  .pharm-slide-home .image h2 span {
+    font-size: 30px;
+  }
+}
+/* help section */
+.section-help {
+  padding: 50px 0 30px;
+}
+.help-box {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.help-box span {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.help-info {
+  flex: 1;
+}
+.help-info h5 {
+  font-size: 16px;
+}
+.help-info p {
+  font-size: 16px;
+  color: rgba(39, 43, 65, 0.5);
+  margin-bottom: 0;
+}
+.bg-lightgreen {
+  background: rgba(10, 229, 168, 0.2);
+}
+.bg-lightwarning {
+  background: rgba(255, 167, 35, 0.2);
+}
+.bg-lightgrey {
+  background: rgba(37, 112, 176, 0.2);
+}
+.bg-lightblue {
+  background: rgba(13, 224, 254, 0.2);
+}

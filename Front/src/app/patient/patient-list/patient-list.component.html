@@ -1,0 +1,28 @@
+<a class="btn btn-success d-flex justify-content-center mb-5" [routerLink]="['/patient','add']">Add</a>
+<table class="table-responsive table text-center table-danger ">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fname</th>
+            <th>Lname</th>
+            <th>Age</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of patients" >
+            <td>{{item._id}}</td>
+            <td>{{item.fname}}</td>
+            <td>{{item.lname}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.address.city}}:{{item.address.street}}:{{item.address.building}}</td>
+            <td>{{item.email}}</td>
+            <td><a class="text-decoration-none btn btn-warning" *ngIf="item._id" [routerLink]="['/patient/update/',item._id]">Update</a></td>
+            <td><a class="text-decoration-none btn btn-danger" (click)="delete(item._id)">Delete</a></td>
+        </tr>
+    </tbody>
+    
+</table>

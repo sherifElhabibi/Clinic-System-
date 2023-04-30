@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg navbar-white bg-white">
+  <a class="navbar-brand" href=""
+    ><img src="../../../../assets/image/logo.png" alt=""
+  /></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ulmain">
+      <!--  -->
+      <div class="d-md-flex">
+        <li class="nav-item active">
+          <a class="nav-link" href="" routerLink="/home">Home </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link"
+            href=""
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Doctor
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link"
+            href=""
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Patients
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            routerLink="/medicine"
+          >
+            Pharmacy
+          </a>
+          <div
+            class="dropdown-menu text-center"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <a class="dropdown-item" href="" routerLink="/medicine/product"
+              >Product</a
+            >
+            <a class="dropdown-item" href="" routerLink="/medicine/cart"
+              >Cart</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link"
+            href=""
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Admin
+          </a>
+        </li>
+      </div>
+      <!--  -->
+      <li>
+        <div class="header my-2 my-lg-0">
+          <!-- <div class="row"> -->
+          <!-- <div class="header-contact-img text-center d-lg-block d-none">
+            <img
+              src="../../../../assets/image/hospital-icon.png"
+              width="50"
+              height="50"
+              alt=""
+            />
+          </div> -->
+          <!-- <div class="header-contact-detail">
+            <p class="contact-header">Contact</p>
+            <p class="contact-info-header">+1 315 369 5943</p>
+          </div> -->
+          <!-- <a routerLink="/register">LOGIN / SIGNUP</a> -->
+
+          <a class="btn my-2 my-sm-0" routerLink="/register">LOGIN / SIGNUP</a>
+
+          <!-- </div> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

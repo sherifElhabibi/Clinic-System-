@@ -1,0 +1,54 @@
+.breadcrumb-bar-six {
+  background: url("../../../assets/image/ban-bg-01.png"),
+    url("../../../assets/image/ban-bg-02.png"), #f8f8f8;
+  background-position: left, right;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+}
+.breadcrumb-bar-six .breadcrumb-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+.breadcrumb-bar-six .page-breadcrumb ol {
+  font-size: 16px;
+}
+.page-breadcrumb ol {
+  background-color: transparent;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+.breadcrumb-bar-six .page-breadcrumb ol li a {
+  color: rgba(39, 43, 65, 0.5);
+  font-weight: 500;
+  text-decoration: none;
+}
+.page-breadcrumb ol li a {
+  color: #fff;
+}
+.breadcrumb-bar-six
+  .page-breadcrumb
+  .breadcrumb-item
+  + .breadcrumb-item::before {
+  color: rgba(39, 43, 65, 0.5);
+  padding-right: 6px;
+  vertical-align: middle;
+  content: "\f105";
+  color: #a2a1a1;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Font Awesome 5 Free";
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: #6c757d;
+}

@@ -1,0 +1,274 @@
+<div class="container-fluid my-5">
+    <h2 class="d-flex justify-content-center my-5">Update Patient</h2>
+    <div class="col-md-5 col-sm-8 mx-lg-auto my-5">
+        <form [formGroup]="registrationForm" class="px-3 py-4 my-3 rounded-1">
+            <div class="text-center">
+                <h3 class="mb-2">Info</h3>
+                <hr class="w-25 text-center mx-auto" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="" class="form-label">First Name</label>
+                <input [class.is-invalid]="getFname()?.invalid && getFname()?.touched" type="text" class="form-control" formControlName="fname" />
+                <div *ngIf="getFname()?.invalid && getFname()?.touched">
+                    <small *ngIf="getFname()?.errors?.['required']" type="text" class="text-danger" formControlName="fname">First Name required (No Numbers)</small
+          >
+          <small
+            *ngIf="getFname()?.errors?.['minlength'] || getFname()?.errors?.['pattern']"
+            type="text"
+            class="text-danger"
+            formControlName="fname"
+            >First Name must be at least 3 Without Numbers</small
+          >
+          <small
+            *ngIf="getFname()?.errors?.['forbiddenName']"
+            type="text"
+            class="text-danger"
+            formControlName="fname"
+            >{{getFname()?.errors?.['forbiddenName'].value}} not allowed</small
+          >
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Last Name</label>
+        <input
+          [class.is-invalid]="getLname()?.invalid && getLname()?.touched"
+          type="text"
+          class="form-control"
+          formControlName="lname"
+        />
+        <div *ngIf="getLname()?.invalid && getLname()?.touched">
+          <small
+            *ngIf="getLname()?.errors?.['required']"
+            type="text"
+            class="text-danger"
+            formControlName="lname"
+            >Last Name required (No Numbers)</small
+          >
+          <small
+            *ngIf="getLname()?.errors?.['minlength'] || getLname()?.errors?.['pattern']"
+            type="text"
+            class="text-danger"
+            formControlName="lname"
+            >Last Name must be at least 3 Without Numbers</small
+          >
+          <small
+            *ngIf="getLname()?.errors?.['forbiddenName']"
+            type="text"
+            class="text-danger"
+            formControlName="lname"
+            >{{getLname()?.errors?.['forbiddenName'].value}} not allowed</small
+          >
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Email</label>
+        <input
+          [class.is-invalid]="getEmail()?.invalid && getEmail()?.touched"
+          type="text"
+          class="form-control"
+          formControlName="email"
+        />
+        <div *ngIf="getEmail()?.invalid && getEmail()?.touched">
+          <small
+            *ngIf="getEmail()?.errors?.['required']"
+            type="text"
+            class="text-danger"
+            formControlName="email"
+            >Email required</small
+          >
+          <small
+            *ngIf="getEmail()?.errors?.['pattern']"
+            type="text"
+            class="text-danger"
+            formControlName="email"
+            >Email Not Valid</small
+          >
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="">Confirm Password</label>
+        <input
+          [class.is-invalid]="registrationForm.errors?.['misMatch']"
+          type="password"
+          class="form-control"
+          formControlName="confirmPassword"
+        />
+        <small *ngIf="registrationForm.errors?.['misMatch']" class="text-danger"
+          >Not valid</small
+        >
+      </div>
+
+      <div class="form-group mb-3">
+            <label for="">Gender</label>
+            <select name="" id="" formControlName="gender" class="form-control">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+          </div>
+
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Age</label>
+        <input
+          [class.is-invalid]="getAge()?.invalid && getAge()?.touched"
+          type="text"
+          class="form-control"
+          formControlName="age"
+        />
+        <div *ngIf="getAge()?.invalid && getAge()?.touched">
+          <small
+            *ngIf="getAge()?.errors?.['required']"
+            type="text"
+            class="text-danger"
+            formControlName="age"
+            >Age required</small
+          >
+          <small
+            *ngIf="getAge()?.errors?.['pattern']"
+            type="text"
+            class="text-danger"
+            formControlName="age"
+            >Age from 1-100</small
+          >
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="" class="form-label">Telephone</label>
+        <input
+          [class.is-invalid]="getNumber()?.invalid && getNumber()?.touched"
+          type="text"
+          class="form-control"
+          formControlName="telephone"
+        />
+        <div *ngIf="getNumber()?.invalid && getNumber()?.touched">
+          <div *ngIf="getNumber()?.invalid && getNumber()?.touched">
+            <small
+              *ngIf="getNumber()?.errors?.['required']"
+              type="text"
+              class="text-danger"
+              formControlName="telephone"
+              >Telephone required</small
+            >
+            <small
+              *ngIf="getNumber()?.errors?.['pattern']"
+              type="text"
+              class="text-danger"
+              formControlName="telephone"
+              >Telephone Not Valid</small
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="">Role</label>
+        <input type="text" disabled value="Patient" class="form-control">
+      </div>
+
+      <br />
+      <div formGroupName="address">
+        <div class="text-center">
+          <h3 class="mb-2">Address</h3>
+          <hr class="w-25 text-center mx-auto" />
+        </div>
+        <div class="mb-3">
+          <label for="">City</label>
+          <input
+            [class.is-invalid]="getCity()?.invalid && getCity()?.touched"
+            type="text"
+            class="form-control"
+            formControlName="city"
+          />
+          <div *ngIf="getCity()?.invalid && getCity()?.touched">
+            <div *ngIf="getCity()?.invalid && getCity()?.touched">
+              <small
+                *ngIf="getCity()?.errors?.['required']"
+                type="text"
+                class="text-danger"
+                formControlName="city"
+                >City required</small
+              >
+              <small
+                *ngIf="getCity()?.errors?.['pattern']"
+                type="text"
+                class="text-danger"
+                formControlName="city"
+                >City Not Valid</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="">Street</label>
+          <input
+            [class.is-invalid]="getStreet()?.invalid && getStreet()?.touched"
+            type="text"
+            class="form-control"
+            formControlName="street"
+          />
+          <div *ngIf="getStreet()?.invalid && getStreet()?.touched">
+            <div *ngIf="getStreet()?.invalid && getStreet()?.touched">
+              <small
+                *ngIf="getStreet()?.errors?.['required']"
+                type="text"
+                class="text-danger"
+                formControlName="street"
+                >Street required</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="">Building Number</label>
+          <input
+            [class.is-invalid]="
+              getBuilding()?.invalid && getBuilding()?.touched
+            "
+            type="text"
+            class="form-control"
+            formControlName="building"
+          />
+          <div *ngIf="getBuilding()?.invalid && getBuilding()?.touched">
+            <div *ngIf="getBuilding()?.invalid && getBuilding()?.touched">
+              <small
+                *ngIf="getBuilding()?.errors?.['required']"
+                type="text"
+                class="text-danger"
+                formControlName="building"
+                >Building Number required</small
+              >
+              <small
+                *ngIf="getBuilding()?.errors?.['pattern']"
+                type="text"
+                class="text-danger"
+                formControlName="building"
+                >Building Number Not Valid</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="btns d-md-flex justify-content-evenly">
+                <button (click)="updateApi()" class="bg-danger rounded-1 mt-4 text-light border-0 py-2 px-3  me-3">
+          Reset
+        </button>
+                <button [disabled]="!registrationForm.valid" (click)="display()" (click)="updateUser()" class="success rounded-1 mt-4 text-light border-0 py-2 px-3  me-3">
+          Update
+        </button>
+            </div>
+        </form>
+    </div>
+</div>

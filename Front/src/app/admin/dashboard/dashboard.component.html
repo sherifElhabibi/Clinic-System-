@@ -1,0 +1,112 @@
+<div class="main-wrapper">
+  <div class="breadcrumb-bar">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-12 col-12">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Admin</li>
+            </ol>
+          </nav>
+          <h2 class="breadcrumb-title">Admin</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+          <div class="profile-sidebar">
+            <div class="widget-profile pro-widget-content">
+              <div class="profile-info-widget">
+                <a href="#" class="booking-doc-img">
+                  <img src="https://fakeimg.pl/300/" alt="User Image" />
+                </a>
+                <div class="profile-det-info">
+                  <h3>
+                    <!--{{ emp.firstName }} {{ emp.lastName }}-->Alaa Mandor
+                  </h3>
+                  <div class="patient-details">
+                    <h5 class="mb-0"><!--{{ emp.email }}-->Admin123@iti.com</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-widget">
+              <nav class="dashboard-menu">
+                <ul>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['Doctors']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Doctors</span>
+                    </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['DoctorAdd']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Add doctor</span>
+                    </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['Employees']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Employees</span>
+                    </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['EmployeeAdd']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Add employee</span>
+                    </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['Patients']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Patients</span>
+                    </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['PatientAdd']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Add patient</span>
+                    </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['appointments']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Appointments</span>
+                    </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['invoices']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Invoices</span>
+                    </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a [routerLink]="['']">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Prescriptions</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fas fa-sign-out-alt"></i>
+                      <span>Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-lg-8 col-xl-9">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

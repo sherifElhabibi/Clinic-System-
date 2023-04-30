@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row mt-5">
+    <div
+      class="w-75 mx-auto py-3 mb-3 d-md-flex d-block justify-content-around align-items-center inner-container"
+      *ngFor="let item of employees"
+    >
+      <div class="image text-center mb-2">
+        <img src="{{ item?.image }}" alt="employeeImage" />
+      </div>
+      <div class="body text-center mb-2">
+        <div class="name">{{ item.firstName }} {{ item.lastName }}</div>
+        <div class="info">
+          <ul class="list-unstyled d-inline-block">
+            <li>{{ item.email }}</li>
+            <li>{{ item.empAge }}</li>
+            <li>{{ item.empPhone }}</li>
+            <li>
+              {{ item.address.city }}, {{ item.address.street }},
+              {{ item.address.building }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="update text-center mb-2">
+        <button class="btn btn-update px-3 py-2" (click)="UpdateEmp(item._id)">
+          Update
+        </button>
+      </div>
+      <div class="delete text-center mb-2">
+        <button class="btn btn-danger px-3 py-2" (click)="Delete(item._id)">
+          X
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/doctor-assets/css/style";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+html,
+body {
+  height: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+:root {
+  --main: #15558d;
+  --submain: #0b68b9;
+  --secondary: #7e7575;
+  --buttonbg: #89d4ce;
+  --buttonColor: #25bbad;
+  --confirmButton: #26af48;
+  --confirmBg: #d1e5dc;
+  --white: #ffffff;
+  --title: #272b41;
+  --hover: #68dda9;
+  --lightgrey: #dcd8d8;
+}

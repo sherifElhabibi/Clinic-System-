@@ -1,0 +1,46 @@
+.banner-wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  /* padding: 10px; */
+}
+.banner-wrapper .banner-header h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.banner-wrapper .banner-header p {
+  color: #363a3d;
+  margin-bottom: 0;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .banner-wrapper {
+    max-width: 720px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .section-search {
+    min-height: 410px;
+    padding: 30px 15px;
+  }
+  .banner-wrapper .banner-header h1 {
+    font-size: 28px;
+  }
+  .search-box form {
+    display: block;
+  }
+
+  @media only screen and (max-width: 767.98px) {
+    .container-fluid {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .banner-wrapper .banner-header p {
+      font-size: 1rem;
+    }
+  }
+}

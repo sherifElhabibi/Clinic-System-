@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-9 mx-auto my-5">
+      <form class="py-5 px-4 rounded-1" [formGroup]="addingForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="exampleInputFirst" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="exampleInputFirst" name="firstName" formControlName="firstName" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputLast" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="exampleInputLast" name="lastName" formControlName="lastName" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputAge" class="form-label">Age</label>
+          <input type="number" class="form-control" id="exampleInputAge" name="empAge" formControlName="empAge" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputGender" class="form-label">Gender</label>
+          <select id="exampleInputGender" class="form-control" name="empGender" formControlName="empGender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="empEmail" formControlName="email" />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="empPassword"
+            formControlName="password" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputImage" class="form-label">Image</label>
+          <input type="file" class="form-control" id="exampleInputImage" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputSalary" class="form-label">Salary</label>
+          <input type="number" class="form-control" id="exampleInputSalary" formControlName="empSalary" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPhone" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="exampleInputPhone" name="empPhone" formControlName="empPhone" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputClinic" class="form-label">Clinic</label>
+          <select name="" id="exampleInputClinic" class="form-control" formControlName="clinicId">
+            <option value="{{ item._id }}" *ngFor="let item of clinics">
+              {{ item.name }}
+            </option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputRole" class="form-label">Role</label>
+          <input type="text" class="form-control" id="exampleInputRole" placeholder="Employee" formControlName="role"
+            name="role" />
+        </div>
+        <div formGroupName="address">
+          <div class="mb-3">
+            <label for="exampleInputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="exampleInputCity" formControlName="city" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputStreet" class="form-label">Street</label>
+            <input type="text" class="form-control" id="exampleInputStreet" formControlName="street" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputBulding" class="form-label">Bulding Number</label>
+            <input type="number" class="form-control" id="exampleInputBulding" formControlName="building" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

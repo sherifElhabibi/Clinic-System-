@@ -1,0 +1,332 @@
+.pharmacy-cart-content {
+  padding: 50px 0 30px;
+}
+.content {
+  min-height: 600px;
+  padding: 30px 0 0;
+  background-color: #fff;
+}
+.card-table {
+  border: 1px solid rgba(39, 43, 65, 0.25);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.card {
+  border: 1px solid #f0f0f0;
+  margin-bottom: 1.8rem;
+}
+.card-table .card-body {
+  padding: 0;
+}
+.card-body {
+  padding: 1.5rem;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+.table {
+  color: #272b41;
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+.table thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+.table > thead {
+  vertical-align: bottom;
+}
+.cart-table .card-body .table > thead > tr > th {
+  color: #272b41;
+}
+.table tr th:first-child {
+  padding-left: 15px;
+}
+.cart-table .table td,
+.cart-table .table th {
+  font-weight: 500;
+  font-size: 18px;
+  padding: 15px;
+  padding-left: 15px;
+  border-top: 1px solid rgba(39, 43, 65, 0.2);
+  border-color: rgba(39, 43, 65, 0.2);
+}
+.table.table-center td,
+.table.table-center th {
+  vertical-align: middle;
+}
+.table thead tr th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.table > :not(:first-child) {
+  border: 0;
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.cart-table .table tr td:first-child,
+.cart-table .table tr th:first-child {
+  padding-left: 15px;
+}
+.cart-table .table td {
+  color: rgba(39, 43, 65, 0.5);
+}
+.cart-table .table td,
+.cart-table .table th {
+  font-weight: 500;
+  font-size: 18px;
+  padding: 15px;
+  padding-left: 15px;
+  border-top: 1px solid rgba(39, 43, 65, 0.2);
+  border-color: rgba(39, 43, 65, 0.2);
+}
+.product-det-buy {
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+.custom-increment .product-det-buy .product-quantity {
+  height: 38px;
+  min-width: 116px;
+}
+.product-det-buy .product-quantity {
+  border: 1px solid rgba(39, 43, 65, 0.2);
+  border-radius: 8px;
+  min-width: 162px;
+  height: 54px;
+  padding: 0 15px;
+  display: inline-flex;
+  box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-increment .product-quantity .quantity-btn {
+  font-size: 20px;
+}
+.product-quantity .quantity-btn {
+  color: rgba(39, 43, 65, 0.2);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 32px;
+}
+.custom-increment.cart input[type="text"] {
+  width: 60px;
+}
+.custom-increment .product-quantity .quantity-input {
+  border: 0;
+  padding: 0;
+  font-size: 18px;
+}
+.custom-increment input[type="text"] {
+  border: 1px solid #dbdbdb;
+  border-radius: 0;
+  padding: 7px 15px;
+  text-align: center;
+  width: 70%;
+}
+.product-quantity .quantity-input {
+  border: 0;
+  max-width: 50px;
+  text-align: center;
+  color: #272b41;
+  font-weight: 500;
+  font-size: 26px;
+  outline: none;
+}
+.cart-table .table .subtotal {
+  color: #272b41;
+}
+
+.cart-table .table-action a {
+  font-size: 20px;
+  font-weight: 700;
+}
+table.table td h2.table-avatar {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: inherit;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+table.table td h2.table-avatar {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: inherit;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+table.table td h2 {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+.cart-table .table td .table-avatar .avatar-sm {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  margin-right: 15px;
+  background: #f6f5fa;
+  display: flex;
+  box-align: center;
+  align-items: center;
+  justify-content: center;
+}
+table.table td h2 a {
+  color: #272b41;
+}
+.avatar-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+}
+.cart-table .table td .table-avatar .avatar-sm img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+.avatar > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.data-link {
+  color: rgba(39, 43, 65, 0.5);
+  text-decoration: none;
+}
+
+.booking-total-card {
+  background: #f8f8f8;
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 20px;
+}
+.card {
+  border: 1px solid #f0f0f0;
+  margin-bottom: 1.8rem;
+}
+.booking-total-card {
+  background-color: #f7f6f6 !important;
+}
+.card-header {
+  background-color: #d6d6d6 !important;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.booking-total-card .card-header {
+  background-color: #c2c2c2;
+  border: 0;
+  border-radius: 8px 8px 0px 0px;
+  padding: 20px;
+}
+.card .card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.card-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 1rem 1.5rem;
+}
+.card-header {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.booking-total-card .card-header .card-title {
+  font-weight: 500;
+  font-size: 18px;
+  color: #272b41;
+}
+.card .card-header .card-title {
+  margin-bottom: 0;
+}
+.card-title {
+  margin-bottom: 15px;
+}
+.booking-total-card .card-body {
+  padding: 20px;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+.booking-subtotal ul {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid rgba(39, 43, 65, 0.2);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.booking-subtotal ul li {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(39, 43, 65, 0.5);
+}
+.booking-subtotal ul li span {
+  color: #272b41;
+  float: right;
+}
+.subtotal-booking {
+  float: left;
+  width: 100%;
+}
+.subtotal-booking .btn {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  min-width: 100%;
+  padding: 12px 26px;
+  background: #0de0fe;
+  border: 1px solid #0de0fe;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.table-action a img {
+  width: 20px;
+  height: 20px;
+}

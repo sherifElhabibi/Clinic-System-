@@ -1,0 +1,10 @@
+.mainwrapper {
+  min-height: 450px;
+  /* background: url("../../../../assets/image/search-bg.png"); */
+  background: url("../../../assets/image/search-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: relative;
+  background-blend-mode: darken;
+  padding: 50px 0;
+}

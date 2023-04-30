@@ -1,0 +1,43 @@
+<div class="container my-4">
+    <div class="table-responsive">
+      <div style="overflow-x: auto">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Client Name</th>
+              <th>Invoice date</th>
+              <th>delete</th>
+              <th>show details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let invoice of invoices">
+              <td>{{ invoice.patientId.fname }} {{ invoice.patientId.lname }}</td>
+              <td>{{ invoice.invoiceDate }}</td>
+              <td>
+                <a>
+                  <button
+                    class="btn btn-sm btn-danger"
+                    (click)="delete(invoice._id)"
+                  >
+                    <i class="fa fa-trash"></i>
+                  </button>
+                </a>
+              </td>
+              <td>
+                <a>
+                  <button
+                    class="btn btn-sm btn-dark me-2"
+                    (click)="ShowDetails(invoice._id)"
+                  >
+                    <i class="fa fa-eye"></i>
+                  </button>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

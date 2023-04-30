@@ -1,0 +1,35 @@
+<p>appointment-add works!</p>
+
+<div class="container">
+    <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+
+
+
+        <div class="form-group">
+            <label for="date" class="form-label">Date:</label>
+            <input type="date" id="date" class="form-control data-control" formControlName="date" required min="{{ getCurrentDate() }}">
+            <div class="invalid-feedback">Date is required.</div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="time" class="form-label">Time:</label>
+            <input type="time" id="time" class="form-control time-control" formControlName="time" required step="1800" min="17:00" max="22:00">
+            <div class="invalid-feedback">Time is required.</div>
+        </div>
+
+
+
+
+        <mat-chip-listbox aria-label="Time selection" class="">
+            <mat-chip-option *ngFor="let time of times">{{ time }}</mat-chip-option>
+        </mat-chip-listbox>
+
+
+
+        <!-- <button type="submit" class="btn btn-primary" [disabled]="!reservationForm.valid">Submit</button> -->
+        <button type="submit" class="btn btn-primary my-2">Submit</button>
+    </form>
+</div>
