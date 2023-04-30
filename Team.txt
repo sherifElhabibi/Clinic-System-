@@ -1,0 +1,21 @@
+This Project Was Implemented By the following Members : 
+
+Sherif Elhabibi 
+Front:Patient Page + Register
+Back:Patient MVC + Authentication/Authorization
+
+Mayar Ahmed
+Front: Employee Page
+Back: Employee MVC + Medicine MVC
+
+Ayman Samir
+Front:Doctor Page + Appointments
+Back:Doctor MVC + Appoinmtents MVC
+
+Alaa Mandor
+Front:Payment + Invoice
+Back:Payment MVC + Invoice MVC + Login
+
+Abdelrahman Elemam
+Front: Home Page
+Back:Clinic MVC + Prescription MVC
