@@ -6,7 +6,7 @@ Back:Patient MVC + Authentication/Authorization
 
 Mayar Ahmed
 Front: Employee Page
-Back: Employee MVC + Medicine MVC
+Back: Employee MVC + Prescription MVC
 
 Ayman Samir
 Front:Doctor Page + Appointments
@@ -18,4 +18,4 @@ Back:Payment MVC + Invoice MVC + Login
 
 Abdelrahman Elemam
 Front: Home Page
-Back:Clinic MVC + Prescription MVC
+Back:Clinic MVC + Medicine MVC
